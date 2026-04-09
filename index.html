@@ -466,39 +466,22 @@
 
   /* ===== FLOATING CTA ===== */
   .float-cta {
-    position:fixed; bottom:40px; right:40px; z-index:400;
-    width:140px; height:140px;
-    display:flex; align-items:center; justify-content:center;
-    text-decoration:none; color:var(--yes-dark);
+    position:fixed; bottom:36px; right:36px; z-index:400;
+    display:inline-flex; align-items:center; gap:10px;
+    padding:14px 28px; border-radius:60px;
+    background:var(--yes-orange); color:#fff;
+    font-family:var(--sans); font-size:.85rem; font-weight:500;
+    letter-spacing:.04em; text-decoration:none;
     opacity:0; pointer-events:none;
-    transform:scale(.6) rotate(-20deg);
-    transition:opacity .55s cubic-bezier(.25,.1,.25,1),transform .55s cubic-bezier(.25,.1,.25,1);
+    transform:translateY(20px);
+    transition:opacity .5s ease, transform .5s ease, background .3s ease;
+    box-shadow:0 4px 20px rgba(0,0,0,.15);
   }
-  .float-cta.visible { opacity:1; pointer-events:auto; transform:scale(1) rotate(0deg); }
-  /* spinning text ring */
-  .float-cta-ring {
-    position:absolute; inset:0; width:100%; height:100%;
-    fill:var(--yes-dark);
-    font-size:7.4px; letter-spacing:3.2px;
-    transition:fill .3s ease;
-  }
-  .float-cta.on-dark .float-cta-ring { fill:var(--yes-light); }
-  .float-cta:hover .float-cta-ring { opacity:.7; }
-  @keyframes float-spin { to { transform:rotate(360deg); } }
-  /* centre circle */
-  .float-cta-dot {
-    width:62px; height:62px; border-radius:50%;
-    background:var(--yes-orange);
-    display:flex; align-items:center; justify-content:center;
-    transition:transform .35s cubic-bezier(.25,.1,.25,1),box-shadow .35s;
-    position:relative; z-index:1;
-  }
-  .float-cta:hover .float-cta-dot {
-    transform:scale(1.08);
-  }
+  .float-cta.visible { opacity:1; pointer-events:auto; transform:translateY(0); }
+  .float-cta:hover { background:var(--yes-dark); }
+  .float-cta svg { width:18px; height:18px; fill:currentColor; }
   @media(max-width:600px){
-    .float-cta { bottom:20px; right:20px; width:88px; height:88px; }
-    .float-cta-dot { width:38px; height:38px; }
+    .float-cta { bottom:20px; right:20px; padding:12px 22px; font-size:.8rem; }
   }
 
   /* ===== MOBILE REFINEMENTS ===== */
@@ -569,6 +552,12 @@
   </ul>
 </nav>
 
+
+<!-- Floating CTA -->
+<a href="tel:+447745535737" class="float-cta" id="floatCta">
+  <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
+  Let's talk
+</a>
 
 <!-- Hero -->
 <section class="hero">
@@ -821,6 +810,15 @@
   },{passive:true});
   window.addEventListener('resize',runParallax);
   runParallax();
+
+  // Floating CTA — show after scrolling past hero
+  const floatCta=document.getElementById('floatCta');
+  if(floatCta){
+    window.addEventListener('scroll',()=>{
+      if(window.scrollY>window.innerHeight*.5){floatCta.classList.add('visible');}
+      else{floatCta.classList.remove('visible');}
+    },{passive:true});
+  }
 </script>
 </body>
 </html>
