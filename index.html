@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yes& — Experience Design Studio | Thoughtful by design</title>
+<meta name="description" content="Yes& is a London-based experience design studio crafting immersive events, brand moments and cultural experiences for discerning audiences. Thoughtful by design.">
+<meta name="keywords" content="experience design, event design, immersive experiences, creative studio, London, brand experiences, cultural events, Yes&">
+<meta name="author" content="Yes&">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yesworld.netlify.app/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Yes& — Experience Design Studio">
+<meta property="og:description" content="London-based experience design studio crafting immersive events and cultural moments. Thoughtful by design.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yesworld.netlify.app/">
+<meta property="og:image" content="https://yesworld.netlify.app/images/hero-portrait.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="2400">
+<meta property="og:site_name" content="Yes&">
+<meta property="og:locale" content="en_GB">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yes& — Experience Design Studio">
+<meta name="twitter:description" content="London-based experience design studio crafting immersive events. Thoughtful by design.">
+<meta name="twitter:image" content="https://yesworld.netlify.app/images/hero-portrait.jpg">
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="images/yes-logo.svg">
+<meta name="theme-color" content="#1C3127">
+
+<!-- Font preload (speeds up LCP) -->
+<link rel="preload" href="/fonts/BradfordLLSub-Book.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/fonts/BeausiteClassicWeb-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="images/hero-portrait.jpg" as="image" fetchpriority="high">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Yes&",
+  "url": "https://yesworld.netlify.app/",
+  "logo": "https://yesworld.netlify.app/images/yes-logo.svg",
+  "description": "Experience design studio crafting immersive events and cultural moments.",
+  "founder": { "@type": "Person", "name": "Amy Rowe" },
+  "areaServed": "GB",
+  "sameAs": []
+}
+</script>
+
+<!-- 
+  FONT SETUP — Bradford + Beausite Classic
+  Swap Google Fonts fallbacks for @font-face when webfonts available.
+  
+  @font-face { font-family:'Bradford'; src:url('fonts/Bradford-Regular.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
+  @font-face { font-family:'Bradford'; src:url('fonts/Bradford-Italic.woff2') format('woff2'); font-weight:400; font-style:italic; font-display:swap; }
+  @font-face { font-family:'Beausite Classic'; src:url('fonts/BeausiteClassic-Regular.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
+  @font-face { font-family:'Beausite Classic'; src:url('fonts/BeausiteClassic-Light.woff2') format('woff2'); font-weight:300; font-style:normal; font-display:swap; }
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+  /* ===== BRAND FONTS ===== */
+  @font-face {
+    font-family: 'Bradford';
+    src: url('/fonts/BradfordLLSub-Book.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Bradford';
+    src: url('/fonts/BradfordLLSub-BookItalic.woff2') format('woff2'),
+         url('/fonts/BradfordLLSub-BookItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Beausite Classic';
+    src: url('/fonts/BeausiteClassicWeb-Regular.woff2') format('woff2'),
+         url('/fonts/BeausiteClassicWeb-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Beausite Classic';
+    src: url('/fonts/BeausiteClassicWeb-Semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --yes-light:  #F8F8F8;
+    --yes-dark:   #1C3127;
+    --yes-orange: #FE4D02;
+    --yes-mid:    #4A6356;
+    --serif:      'Bradford', Georgia, 'Times New Roman', serif;
+    --sans:       'Beausite Classic', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; cursor:none; }
+  body {
+    font-family: var(--sans);
+    background: var(--yes-light);
+    color: var(--yes-dark);
+    overflow-x: hidden;
+    cursor: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== CURSOR ===== */
+  .cursor-dot { display:none !important; }
+  .cursor-trail {
+    position:fixed; width:12px; height:12px;
+    background:var(--yes-orange); border:none;
+    border-radius:50%; pointer-events:none; z-index:9998;
+    transform:translate(-50%,-50%);
+    transition:width .3s cubic-bezier(.175,.885,.32,1.275),height .3s cubic-bezier(.175,.885,.32,1.275),opacity .35s;
+    opacity:0;
+  }
+  .cursor-trail.visible { opacity:1; }
+  .cursor-trail.hovering { width:22px; height:22px; opacity:.9; }
+  @media(hover:none),(pointer:coarse){
+    html,body,*{cursor:auto!important}
+    h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,h6:hover,
+    p:hover,li:hover,span:hover,strong:hover,em:hover,
+    .hero-tagline:hover,.hero-tagline-sub:hover,.section-label:hover,.nav-word:hover,
+    .scatter-line:hover,.intro-lines span:hover,.band-text:hover,.services-col li:hover,
+    .scatter-line:hover em,.intro-lines span:hover em { color:inherit !important; }
+    .cursor-dot,.cursor-trail{display:none!important}
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    padding:32px 40px; display:flex; justify-content:space-between; align-items:center;
+    transition:background .4s,padding .4s;
+  }
+  nav.scrolled {
+    background:rgba(248,248,248,.92);
+    backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+    padding:20px 40px;
+  }
+  .nav-logo { display:flex; align-items:center; gap:0; }
+  .nav-logo-svg { display:block; height:54px; width:auto; filter:brightness(0) invert(1); transition:filter .4s, height .4s; }
+  nav.scrolled .nav-logo-svg { filter:none; height:42px; }
+  .nav-logo-text {
+    font-weight:500; font-size:1.2rem; letter-spacing:.01em;
+    color:var(--yes-light); transition:color .4s;
+  }
+  .nav-logo-amp {
+    font-family:var(--serif); font-style:italic; font-weight:400;
+    font-size:1.4rem; color:var(--yes-light); margin-left:1px; transition:color .4s;
+  }
+  nav.scrolled .nav-logo-text,
+  nav.scrolled .nav-logo-amp,
+  nav.scrolled .nav-word { color:var(--yes-dark); }
+
+  /* Dynamic cycling word in nav — letter-by-letter reveal */
+  .nav-word-wrapper {
+    display:inline-flex; align-items:center; position:relative; overflow:hidden;
+    height:54px; padding-bottom:8px; margin-left:6px; min-width:360px;
+    transition:height .4s;
+  }
+  nav.scrolled .nav-word-wrapper { height:42px; }
+  .nav-word {
+    display:block; position:absolute; left:0; top:50%; white-space:nowrap;
+    transform:translateY(60%);
+    opacity:0;
+    font-family:var(--serif); font-style:normal; font-weight:400;
+    font-size:3.2rem; line-height:1.2; color:var(--yes-light);
+    transition:transform .6s cubic-bezier(.76,0,.24,1), opacity .45s ease, color .4s ease, font-size .4s ease;
+  }
+  nav.scrolled .nav-word { font-size:2.5rem; }
+  .nav-word.active { transform:translateY(-45%); opacity:1; }
+  .nav-word.above { transform:translateY(-150%); opacity:0; }
+  .nav-links { display:flex; gap:28px; list-style:none; }
+  .nav-links a {
+    font-size:.8rem; font-weight:400; letter-spacing:.04em;
+    color:var(--yes-light); text-decoration:none; transition:color .3s;
+  }
+  nav.scrolled .nav-links a { color:var(--yes-dark); }
+  .nav-links a:hover { color:var(--yes-orange); }
+
+  /* ===== TEXT HOVER (orange on hover) ===== */
+  h1, h2, h3, h4, h5, h6, p, li, span, a,
+  .hero-tagline, .hero-tagline-sub, .section-label, .nav-word,
+  .scatter-line, .intro-lines span, .band-text, .services-col li {
+    transition:color .25s ease;
+  }
+  h1, h2, h3, h4, h5, h6, p, li, span, strong, em, a,
+  .hero-tagline, .hero-tagline-sub, .section-label, .nav-word,
+  .scatter-line, .intro-lines span, .band-text, .services-col li {
+    transition: color .25s ease;
+  }
+  h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover,
+  p:hover, li:hover, span:hover, strong:hover,
+  .hero-tagline:hover, .hero-tagline-sub:hover, .section-label:hover, .nav-word:hover,
+  .scatter-line:hover, .intro-lines span:hover, .band-text:hover, .services-col li:hover {
+    color:var(--yes-orange) !important;
+  }
+  /* Orange accents flip to green on hover */
+  em, .scatter-line em, .intro-lines span em { transition: color .25s ease; }
+  em:hover, .scatter-line em:hover, .intro-lines span em:hover,
+  .scatter-line:hover em, .intro-lines span:hover em { color:var(--yes-dark) !important; }
+
+  /* ===== HERO ===== */
+  .hero {
+    position:relative; height:70vh; min-height:480px; max-height:720px; overflow:hidden;
+    display:flex; align-items:flex-end;
+  }
+  .hero-image { position:absolute; inset:0; z-index:1; }
+  .hero-image img {
+    width:100%; height:100%; object-fit:cover; object-position:60% 32%;
+    will-change:transform;
+  }
+  .hero-overlay {
+    position:absolute; inset:0; z-index:2;
+    background:linear-gradient(to top,rgba(28,49,39,.6) 0%,rgba(28,49,39,.1) 50%,transparent 100%);
+  }
+  .hero-content { position:relative; z-index:3; padding:0 40px 56px; }
+
+  .hero-tagline {
+    font-family:var(--serif); font-weight:400;
+    font-size:clamp(1.6rem,3vw,2.4rem); line-height:1.3;
+    color:var(--yes-light); max-width:500px;
+  }
+
+  .hero-tagline-sub {
+    font-family:var(--sans);
+    font-size:.82rem; font-weight:300; letter-spacing:.12em; text-transform:uppercase;
+    color:rgba(248,248,248,.55); margin-top:16px;
+  }
+
+  /* ===== SECTIONS (shared) ===== */
+  section { padding:0 40px; }
+  .section-pad { padding-top:140px; padding-bottom:120px; }
+  .section-label {
+    font-size:.72rem; font-weight:400; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--yes-mid); margin-bottom:40px;
+  }
+
+  /* ===== INTRO ===== */
+  .intro { max-width:900px; margin:0 auto; }
+  .intro-lines {
+    font-family:var(--serif); font-weight:400;
+    font-size:clamp(1.8rem,3.2vw,2.5rem); line-height:1.55;
+    color:var(--yes-dark);
+  }
+  .intro-lines span {
+    display:block; margin-bottom:24px;
+  }
+  .intro-lines em { font-style:italic; color:var(--yes-orange); }
+
+  /* ===== EDITORIAL SCATTER ===== */
+  .scatter {
+    padding:100px 40px 120px;
+    max-width:1100px;
+    margin:0 auto;
+    position:relative;
+  }
+  .scatter-line {
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(1.6rem,3vw,2.3rem);
+    line-height:1.3;
+    color:var(--yes-dark);
+    margin-bottom:20px;
+    display:block;
+  }
+  .scatter-line.indent-1 { padding-left:12%; }
+  .scatter-line.indent-2 { padding-left:28%; }
+  .scatter-line.indent-3 { padding-left:44%; }
+  .scatter-line.indent-4 { padding-left:58%; }
+  .scatter-line.right { text-align:right; }
+  .scatter-line.center { text-align:center; }
+  .scatter-line em {
+    font-style:italic;
+    color:var(--yes-orange);
+  }
+  .scatter-line.spaced { margin-bottom:40px; }
+
+  @media(max-width:600px){
+    .scatter { padding:60px 24px 80px; }
+    .scatter-line { font-size:1.2rem; }
+    .scatter-line.indent-1 { padding-left:8%; }
+    .scatter-line.indent-2 { padding-left:16%; }
+    .scatter-line.indent-3 { padding-left:24%; }
+    .scatter-line.indent-4 { padding-left:32%; }
+  }
+
+  /* ===== GALLERY ===== */
+  .gallery { padding:0 !important; }
+  .gallery-grid {
+    display:grid; grid-template-columns:1fr 1fr 1fr;
+    gap:0; max-width:none; margin:0; align-items:stretch;
+  }
+  .gallery-item { overflow:hidden; background:var(--yes-dark); }
+  .gallery-item img {
+    width:100%; height:100%; object-fit:cover; display:block;
+    transition:transform .9s cubic-bezier(.25,.1,.25,1);
+  }
+  .gallery-item:hover img { transform:scale(1.12) !important; }
+  .gi-1{grid-column:1/2;grid-row:1/3;min-height:400px}.gi-1 img{height:100%;object-fit:cover}
+  .gi-2{grid-column:2/4;aspect-ratio:16/9}
+  .gi-3{grid-column:2/3;aspect-ratio:3/4}
+  .gi-4{grid-column:3/4;aspect-ratio:3/4}
+  .gi-5{grid-column:1/2;aspect-ratio:4/3}
+  .gi-6{grid-column:2/3;grid-row:3/5;min-height:400px}.gi-6 img{height:100%;object-fit:cover}
+  .gi-7{grid-column:3/4;aspect-ratio:1/1}
+  .gi-8{grid-column:1/2;aspect-ratio:3/4}
+  .gi-9{grid-column:3/4;aspect-ratio:4/5}
+
+  /* ===== SERVICES ===== */
+  .services { max-width:1100px; margin:0 auto; border-top:1px solid rgba(28,49,39,.1); }
+  .services-intro {
+    font-family:var(--serif); font-weight:400;
+    font-size:clamp(1.4rem,2.5vw,1.9rem); line-height:1.5;
+    color:var(--yes-dark); max-width:700px; margin-bottom:72px;
+  }
+  .services-grid {
+    display:grid; grid-template-columns:1fr 1fr; gap:80px;
+  }
+  .services-col h3 {
+    font-family:var(--sans); font-size:.75rem; font-weight:500;
+    letter-spacing:.1em; text-transform:uppercase;
+    color:var(--yes-orange); margin-bottom:28px;
+  }
+  .services-col ul {
+    list-style:none; padding:0;
+  }
+  .services-col li {
+    font-family:var(--serif); font-weight:400;
+    font-size:clamp(1.1rem,1.8vw,1.35rem); line-height:1.4;
+    color:var(--yes-dark); padding:12px 0;
+    border-bottom:1px solid rgba(28,49,39,.07);
+  }
+  .services-col li:last-child { border-bottom:none; }
+
+  .services-cta-wrap { margin-top:64px; }
+
+  /* CTA button */
+  .cta-btn {
+    display:inline-block; font-size:.8rem; font-weight:400;
+    letter-spacing:.1em; text-transform:uppercase;
+    color:var(--yes-dark); text-decoration:none;
+    padding:14px 36px; border:1.5px solid var(--yes-dark);
+    transition:background .35s,color .35s,border-color .35s;
+  }
+  .cta-btn:hover {
+    background:var(--yes-orange); border-color:var(--yes-orange); color:var(--yes-light);
+  }
+
+  /* ===== STORY ===== */
+  .story { max-width:1100px; margin:0 auto; border-top:1px solid rgba(28,49,39,.1); }
+  .story-grid {
+    display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start;
+  }
+  .story-text {
+    font-family:var(--serif); font-weight:400;
+    font-size:clamp(1.05rem,1.6vw,1.2rem); line-height:1.7;
+    color:var(--yes-dark);
+  }
+  .story-text p { margin-bottom:24px; }
+  .story-text p:last-child { margin-bottom:0; }
+  .story-image {
+    aspect-ratio:3/4; overflow:hidden;
+  }
+  .story-image img {
+    width:100%; height:100%; object-fit:cover;
+  }
+
+  /* ===== ORANGE BAND ===== */
+  .band {
+    background:var(--yes-orange); padding:80px 40px; text-align:center;
+  }
+  .band-text {
+    font-family:var(--serif); font-style:italic; font-weight:400;
+    font-size:clamp(1.5rem,3vw,2.4rem); line-height:1.45;
+    color:var(--yes-dark); max-width:700px; margin:0 auto;
+  }
+
+  /* ===== CONTACT ===== */
+  .contact { padding:120px 40px; text-align:center; }
+  .contact-headline {
+    font-family:var(--serif); font-weight:400;
+    font-size:clamp(2rem,4vw,3rem); line-height:1.2;
+    color:var(--yes-dark); margin-bottom:16px;
+  }
+  .contact-sub {
+    font-size:.9rem; font-weight:300; color:var(--yes-mid);
+    margin-bottom:44px; line-height:1.65;
+    max-width:440px; margin-left:auto; margin-right:auto;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    padding:24px 40px; display:flex; justify-content:space-between; align-items:center;
+    font-size:.7rem; font-weight:300; letter-spacing:.06em; color:var(--yes-mid);
+    border-top:1px solid rgba(28,49,39,.1);
+  }
+  footer a { color:var(--yes-mid); text-decoration:none; transition:color .3s; }
+  footer a:hover { color:var(--yes-orange); }
+  .footer-links { display:flex; gap:24px; }
+
+  /* ===== REVEAL ===== */
+  .reveal {
+    opacity:0; transform:translateY(24px);
+    transition:opacity .7s cubic-bezier(.25,.1,.25,1),transform .7s cubic-bezier(.25,.1,.25,1);
+  }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+
+  /* ===== GALLERY PARALLAX FLOW ===== */
+  .gallery-item {
+    will-change:transform;
+  }
+  .gallery-item img {
+    will-change:transform;
+    transition:transform .15s linear !important;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:900px){
+    nav{padding:24px 24px}nav.scrolled{padding:16px 24px}
+    .hero-content{padding:0 24px 40px}
+    section{padding-left:24px;padding-right:24px}
+    .section-pad{padding-top:100px;padding-bottom:80px}
+    .gallery{padding-left:0;padding-right:0;padding-bottom:0}
+    .band{padding:60px 24px}
+    .contact{padding:80px 24px}
+
+    .gallery-grid{grid-template-columns:1fr 1fr;gap:0}
+    .gi-1{grid-column:1/3;grid-row:auto;aspect-ratio:16/10}.gi-1 img{height:auto}
+    .gi-2{grid-column:1/2;aspect-ratio:3/4}
+    .gi-3{grid-column:2/3;aspect-ratio:3/4}
+    .gi-4{grid-column:1/2;aspect-ratio:1/1}
+    .gi-5{grid-column:2/3;aspect-ratio:1/1}
+    .gi-6{grid-column:1/3;grid-row:auto;aspect-ratio:16/10}.gi-6 img{height:auto}
+    .gi-7{grid-column:1/2;aspect-ratio:3/4}
+    .gi-8{grid-column:2/3;aspect-ratio:3/4}
+    .gi-9{grid-column:1/3;aspect-ratio:16/10}
+
+    .services-grid{grid-template-columns:1fr;gap:48px}
+    .story-grid{grid-template-columns:1fr;gap:40px}
+    .story-image{max-width:480px}
+    footer{padding:20px 24px;flex-direction:column;gap:10px}
+  }
+  @media(max-width:600px){
+    .nav-links{gap:16px}.nav-links a{font-size:.7rem}
+    .nav-word-wrapper{min-width:160px;height:36px}
+    .nav-word{font-size:1.5rem;line-height:1.2;transform:translateY(-45%)}
+    .gallery-grid{grid-template-columns:1fr}
+    .gi-1,.gi-2,.gi-3,.gi-4,.gi-5,.gi-6,.gi-7,.gi-8,.gi-9{
+      grid-column:1/-1!important;grid-row:auto!important;aspect-ratio:4/5!important}
+    .gi-1 img,.gi-6 img{height:auto!important}
+  }
+
+  /* ===== FLOATING CTA ===== */
+  .float-cta {
+    position:fixed; bottom:40px; right:40px; z-index:400;
+    width:140px; height:140px;
+    display:flex; align-items:center; justify-content:center;
+    text-decoration:none; color:var(--yes-dark);
+    opacity:0; pointer-events:none;
+    transform:scale(.6) rotate(-20deg);
+    transition:opacity .55s cubic-bezier(.25,.1,.25,1),transform .55s cubic-bezier(.25,.1,.25,1);
+  }
+  .float-cta.visible { opacity:1; pointer-events:auto; transform:scale(1) rotate(0deg); }
+  /* spinning text ring */
+  .float-cta-ring {
+    position:absolute; inset:0; width:100%; height:100%;
+    fill:var(--yes-dark);
+    font-size:7.4px; letter-spacing:3.2px;
+    transition:fill .3s ease;
+  }
+  .float-cta.on-dark .float-cta-ring { fill:var(--yes-light); }
+  .float-cta:hover .float-cta-ring { opacity:.7; }
+  @keyframes float-spin { to { transform:rotate(360deg); } }
+  /* centre circle */
+  .float-cta-dot {
+    width:62px; height:62px; border-radius:50%;
+    background:var(--yes-orange);
+    display:flex; align-items:center; justify-content:center;
+    transition:transform .35s cubic-bezier(.25,.1,.25,1),box-shadow .35s;
+    position:relative; z-index:1;
+  }
+  .float-cta:hover .float-cta-dot {
+    transform:scale(1.08);
+  }
+  @media(max-width:600px){
+    .float-cta { bottom:20px; right:20px; width:88px; height:88px; }
+    .float-cta-dot { width:38px; height:38px; }
+  }
+
+  /* ===== MOBILE REFINEMENTS ===== */
+  @media(max-width:900px){
+    .nav-logo-svg { height:40px; }
+    .hero { height:68vh; min-height:420px; max-height:640px; }
+    .hero-content { padding:0 24px 40px; }
+    .intro-lines { font-size:clamp(1.4rem,4.5vw,2rem); line-height:1.5; }
+    .intro-lines span { margin-bottom:18px; }
+    .band { padding:48px 24px !important; }
+    .band-text { font-size:clamp(1.4rem,4vw,2rem) !important; }
+    .services-col h3 { font-size:1.1rem; }
+    .services-col li { padding:14px 0; font-size:.95rem; }
+    .contact h2, .story h2 { font-size:clamp(1.6rem,4.8vw,2.4rem) !important; }
+  }
+
+  @media(max-width:600px){
+    html, body { overflow-x:hidden; }
+    nav { padding:14px 18px !important; }
+    nav.scrolled { padding:10px 18px !important; }
+    .nav-logo-svg { height:30px; }
+    nav.scrolled .nav-logo-svg { height:26px; }
+    .nav-links { display:none; }
+    .nav-word-wrapper { min-width:240px; height:32px; margin-left:8px; }
+    nav.scrolled .nav-word-wrapper { height:28px; }
+    .nav-word { font-size:1.3rem; line-height:1.2; transform:translateY(-45%); }
+    nav.scrolled .nav-word { font-size:1.15rem; }
+    .hero { height:62vh; min-height:380px; }
+    .hero-content { padding:0 20px 32px; }
+    .hero-tagline { font-size:1.35rem; line-height:1.3; max-width:90%; }
+    .hero-tagline-sub { font-size:.7rem; margin-top:12px; }
+    section { padding:0 20px; }
+    .section-pad { padding-top:72px; padding-bottom:64px; }
+    .section-label { font-size:.68rem; margin-bottom:28px; }
+    .intro-lines { font-size:1.35rem; line-height:1.5; }
+    .scatter { padding:48px 20px 64px; }
+    .scatter-line { font-size:1.2rem; line-height:1.55; }
+    .services-cta-wrap { margin-top:40px; }
+    .cta-btn { padding:14px 28px; font-size:.78rem; }
+    .band { padding:40px 20px !important; }
+    .band-text { font-size:1.35rem !important; line-height:1.4 !important; }
+    .story-grid { gap:32px; }
+    .story-text p { font-size:1rem; line-height:1.6; }
+    .services-col { margin-bottom:32px; }
+    .services-col h3 { font-size:1rem; margin-bottom:16px; }
+    .services-col li { padding:12px 0; font-size:.9rem; }
+    .contact { padding:64px 20px !important; }
+    footer { padding:32px 20px !important; font-size:.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-trail" id="cursorTrail"></div>
+
+<!-- Nav -->
+<nav id="mainNav">
+  <div class="nav-logo">
+    <img class="nav-logo-svg" src="images/yes-logo.svg" alt="Yes&amp;" width="120" height="48">
+    <span class="nav-word-wrapper" id="wordWrapper"></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#story">Story</a></li>
+    <li><a href="#contact">Get in touch</a></li>
+  </ul>
+</nav>
+
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-image">
+    <img src="images/hero-portrait.jpg" alt="Yes& hero" />
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-tagline">Thoughtful by design.</p>
+  </div>
+</section>
+
+<!-- Intro -->
+<section class="intro section-pad">
+  <div class="intro-lines reveal">
+    <span class="scatter-line">we create</span>
+    <span class="scatter-line indent-1"><em>premium experiences</em></span>
+    <span class="scatter-line indent-2 spaced">that bring people together</span>
+    <span class="scatter-line right spaced"><em>and live on as stories</em></span>
+    <span class="scatter-line indent-1">an end-to-end</span>
+    <span class="scatter-line indent-2 spaced"><em>approach</em> to event creation</span>
+    <span class="scatter-line indent-3"><em>with a specialism</em></span>
+    <span class="scatter-line right">in immersive experience design.</span>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery" id="work">
+  <div class="gallery-grid">
+    <div class="gallery-item gi-1 reveal"><img src="images/gallery/g1.jpg" alt="Paris runway trio in black and white" loading="lazy"></div>
+    <div class="gallery-item gi-2 reveal"><img src="images/gallery/g2.jpg" alt="Dark-lipped portrait at event" loading="lazy"></div>
+    <div class="gallery-item gi-3 reveal"><img src="images/gallery/g3.jpg" alt="Dancer turning with ruffle sleeve" loading="lazy"></div>
+    <div class="gallery-item gi-4 reveal"><img src="images/gallery/g4.jpg" alt="Red military jacket silhouette" loading="lazy"></div>
+    <div class="gallery-item gi-5 reveal"><img src="images/gallery/g5.jpg" alt="Mad Hatter juggling performer" loading="lazy"></div>
+    <div class="gallery-item gi-6 reveal"><img src="images/gallery/g6.jpg" alt="Blue chandelier bar atmosphere" loading="lazy"></div>
+    <div class="gallery-item gi-7 reveal"><img src="images/gallery/g7.jpg" alt="Heart and arrows favour detail" loading="lazy"></div>
+    <div class="gallery-item gi-8 reveal"><img src="images/gallery/g8.jpg" alt="Polka dot leather duo at grand entrance" loading="lazy"></div>
+    <div class="gallery-item gi-9 reveal"><img src="images/gallery/g9.jpg" alt="Blurred motion service atmosphere" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services section-pad" id="services">
+  <p class="section-label reveal">Our services</p>
+  <p class="services-intro reveal">
+    More than party planning — Yes& sets the tone and defines what comes next.
+  </p>
+  <div class="services-grid">
+    <div class="services-col reveal">
+      <h3>Private clients</h3>
+      <ul>
+        <li>Milestones & celebrations</li>
+        <li>Immersive experiences</li>
+        <li>Year-round engagements</li>
+        <li>Content & storytelling</li>
+        <li>Private festivals & retreats</li>
+        <li>Styling & costume design</li>
+      </ul>
+    </div>
+    <div class="services-col reveal">
+      <h3>Brand clients</h3>
+      <ul>
+        <li>Strategic advisory</li>
+        <li>Private audience engagement</li>
+        <li>Cultural collaborations</li>
+        <li>Flagship activations</li>
+        <li>Curated residencies & seasons</li>
+      </ul>
+    </div>
+  </div>
+  <div class="services-cta-wrap reveal">
+    <a href="#contact" class="cta-btn">Start a conversation</a>
+  </div>
+</section>
+
+<!-- Story -->
+<section class="story section-pad" id="story">
+  <p class="section-label reveal">Our story</p>
+  <div class="story-grid">
+    <div class="story-text reveal">
+      <p>Yes& founder Amy Rowe trained in drama in New York City, studying the Meisner technique, a discipline rooted in presence, intuition and deep listening. That philosophy still shapes everything we create.</p>
+      <p>She brought this approach into immersive storytelling through her work with Secret Cinema and later launched Amy Victoria Rowe in 2022, crafting experiences for private audiences and culturally driven brands.</p>
+      <p>As the practice evolved beyond singular moments into a more holistic creative studio, the business relaunched in 2026 as Yes&, a refined identity with renewed ambition.</p>
+      <p>Borrowed from theatrical improvisation, Yes& is a philosophy as much as a name. It reflects an open, additive way of working, built on dialogue, momentum and possibility. Always asking what comes next.</p>
+    </div>
+    <div class="story-image reveal">
+      <img src="images/gallery/story.jpg" alt="Typewriter hands in black and white" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- Orange Band -->
+<section class="band reveal">
+  <p class="band-text">Always asking what comes next.</p>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <h2 class="contact-headline reveal" style="font-family:var(--serif)">Something in mind?</h2>
+  <p class="contact-sub reveal">
+    Whether it's an idea taking shape or a conversation worth starting — we'd love to hear from you.
+  </p>
+  <div class="reveal" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+    <a href="mailto:hello@yesandstudio.com" class="cta-btn">Email us</a>
+    <a href="https://wa.me/447834636497" target="_blank" rel="noopener" class="cta-btn">WhatsApp</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <span>&copy; 2026 Yes&</span>
+  <div class="footer-links">
+    <a href="#">Instagram</a>
+    <a href="#">LinkedIn</a>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  /* ---- DYNAMIC CYCLING TEXT ---- */
+  const words = [
+    'Party','Experiences','Events','Immersive','Escapism','Celebrate',
+    'Memories','Curation','Culture','Theatre','Performance','Detail',
+    'Impulse','Curiosity','Family','Escape','Connection','Possibility',
+    'Spontaneity','Stories','Legacy','Dancing','London','Global','Trust'
+  ];
+
+  const wrapper = document.getElementById('wordWrapper');
+  let currentIdx = 0;
+
+  // Build a word element with each character in its own span for stagger animation
+  function createWordEl(text, className) {
+    const el = document.createElement('span');
+    el.className = 'nav-word ' + className;
+    el.textContent = text;
+    return el;
+  }
+
+  // Initialize
+  let currentEl = createWordEl(words[0], 'active');
+  wrapper.appendChild(currentEl);
+
+  setInterval(() => {
+    const nextIdx = (currentIdx + 1) % words.length;
+    const nextEl = createWordEl(words[nextIdx], '');
+    wrapper.appendChild(nextEl);
+
+    // Animate OUT the current word (slide upward)
+    currentEl.className = 'nav-word above';
+
+    // Animate IN the next word after a short delay
+    setTimeout(() => {
+      nextEl.className = 'nav-word active';
+    }, 120);
+
+    const oldEl = currentEl;
+    setTimeout(() => oldEl.remove(), 1200);
+
+    currentEl = nextEl;
+    currentIdx = nextIdx;
+  }, 2800);
+
+  /* ---- CURSOR ---- */
+  const dot = document.getElementById('cursorDot');
+  const trail = document.getElementById('cursorTrail');
+  let mx=0,my=0,tx=0,ty=0;
+
+  document.addEventListener('mousemove',e=>{
+    mx=e.clientX;my=e.clientY;
+    dot.style.left=mx+'px';dot.style.top=my+'px';
+    if(!dot.classList.contains('visible')){
+      dot.classList.add('visible');trail.classList.add('visible');
+      tx=mx;ty=my;
+    }
+  });
+
+  (function loop(){
+    tx+=(mx-tx)*.28;ty+=(my-ty)*.28;
+    trail.style.left=tx+'px';trail.style.top=ty+'px';
+    requestAnimationFrame(loop);
+  })();
+
+  // Floating CTA visibility
+  const floatCta = document.getElementById('floatCta');
+  const heroHeight = document.querySelector('.hero').offsetHeight;
+  const contactSection = document.getElementById('contact');
+  // Detect if CTA overlaps dark/image sections and toggle ring text colour
+  const darkSections = document.querySelectorAll('.hero, .gallery-item, .band-text, .scatter, [style*="background:#1C3127"], [style*="background:var(--yes-dark)"]');
+  function updateCtaColour(){
+    const ctaRect = floatCta.getBoundingClientRect();
+    const ctaCX = ctaRect.left + ctaRect.width/2;
+    const ctaCY = ctaRect.top + ctaRect.height/2;
+    let onDark = false;
+    darkSections.forEach(sec=>{
+      const r = sec.getBoundingClientRect();
+      if(ctaCX >= r.left && ctaCX <= r.right && ctaCY >= r.top && ctaCY <= r.bottom){
+        onDark = true;
+      }
+    });
+    floatCta.classList.toggle('on-dark', onDark);
+  }
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const contactTop = contactSection.getBoundingClientRect().top + scrollY - window.innerHeight * 0.5;
+    if(scrollY > heroHeight * 0.6 && scrollY < contactTop) {
+      floatCta.classList.add('visible');
+    } else {
+      floatCta.classList.remove('visible');
+    }
+    updateCtaColour();
+  },{passive:true});
+  window.addEventListener('resize', updateCtaColour);
+  updateCtaColour();
+
+  document.querySelectorAll('a,button,h1,h2,h3,h4,h5,h6,p,li,span,.cta-btn,.float-cta,.intro-lines,.scatter-line,.services-col li,.band-text,.hero-tagline,.hero-tagline-sub,.section-label,.nav-word').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{trail.classList.add('hovering')});
+    el.addEventListener('mouseleave',()=>{trail.classList.remove('hovering')});
+  });
+
+  /* Keep cursor small (not expanded) when over images */
+  document.querySelectorAll('img,.hero-image,.gallery-item,.hero').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{trail.classList.remove('hovering')});
+  });
+
+  /* ---- NAV SCROLL ---- */
+  const nav=document.getElementById('mainNav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>80));
+
+  /* ---- REVEAL (non-gallery items only) ---- */
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach((e,i)=>{
+      if(e.isIntersecting){
+        setTimeout(()=>e.target.classList.add('visible'),i*60);
+        obs.unobserve(e.target);
+      }
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal:not(.gallery-item)').forEach(el=>obs.observe(el));
+  // Gallery items start visible — parallax handles their motion
+  document.querySelectorAll('.gallery-item.reveal').forEach(el=>el.classList.add('visible'));
+
+  /* ---- SEAMLESS PARALLAX FLOW ---- */
+  const hImg=document.querySelector('.hero-image img');
+  const hero=document.querySelector('.hero');
+  const galleryItems=document.querySelectorAll('.gallery-item');
+  const isMobile=()=>window.innerWidth<=768;
+
+  // Assign each gallery image a unique parallax speed for depth
+  const speeds=[0.08,0.14,0.06,0.12,0.10,0.16,0.07,0.13,0.09];
+  galleryItems.forEach((item,i)=>{
+    item._pSpeed=speeds[i%speeds.length];
+    item.querySelector('img').style.transform='scale(1.18)';
+  });
+
+  let ticking=false;
+  function runParallax(){
+    const y=window.scrollY;
+    const hH=hero.offsetHeight;
+    const mob=isMobile();
+    const viewH=window.innerHeight;
+
+    // Hero parallax
+    const heroFactor=mob?0.45:0.35;
+    if(y<hH+200) hImg.style.transform=`translateY(${y*heroFactor}px) scale(1.12)`;
+
+    // Gallery: each image flows at its own speed
+    const speedMult=mob?2.5:1;
+    galleryItems.forEach(item=>{
+      const rect=item.getBoundingClientRect();
+      if(rect.bottom>-100 && rect.top<viewH+100){
+        // Distance from centre of viewport — drives the shift
+        const centre=rect.top+rect.height/2;
+        const offset=(centre-viewH/2);
+        const shift=-offset*item._pSpeed*speedMult;
+        const img=item.querySelector('img');
+        const hov=item.matches(':hover')?1.22:1.18;
+        img.style.transform=`translateY(${shift}px) scale(${hov})`;
+      }
+    });
+  }
+
+  window.addEventListener('scroll',()=>{
+    if(!ticking){requestAnimationFrame(()=>{runParallax();ticking=false;});ticking=true;}
+  },{passive:true});
+  window.addEventListener('resize',runParallax);
+  runParallax();
+</script>
+</body>
+</html>
