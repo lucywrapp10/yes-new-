@@ -32,8 +32,8 @@
 <meta name="theme-color" content="#1C3127">
 
 <!-- Font preload (speeds up LCP) -->
-<link rel="preload" href="/fonts/BradfordLLSub-Book.woff" as="font" type="font/woff" crossorigin>
-<link rel="preload" href="/fonts/BeausiteClassicWeb-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/BradfordLLSub-Book.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="fonts/BeausiteClassicWeb-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="images/hero-portrait.jpg" as="image" fetchpriority="high">
 
 <!-- Structured data -->
@@ -67,30 +67,30 @@
   /* ===== BRAND FONTS ===== */
   @font-face {
     font-family: 'Bradford';
-    src: url('/fonts/BradfordLLSub-Book.woff') format('woff');
+    src: url('fonts/BradfordLLSub-Book.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
   @font-face {
     font-family: 'Bradford';
-    src: url('/fonts/BradfordLLSub-BookItalic.woff2') format('woff2'),
-         url('/fonts/BradfordLLSub-BookItalic.woff') format('woff');
+    src: url('fonts/BradfordLLSub-BookItalic.woff2') format('woff2'),
+         url('fonts/BradfordLLSub-BookItalic.woff') format('woff');
     font-weight: 400;
     font-style: italic;
     font-display: swap;
   }
   @font-face {
     font-family: 'Beausite Classic';
-    src: url('/fonts/BeausiteClassicWeb-Regular.woff2') format('woff2'),
-         url('/fonts/BeausiteClassicWeb-Regular.woff') format('woff');
+    src: url('fonts/BeausiteClassicWeb-Regular.woff2') format('woff2'),
+         url('fonts/BeausiteClassicWeb-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
   @font-face {
     font-family: 'Beausite Classic';
-    src: url('/fonts/BeausiteClassicWeb-Semibold.woff2') format('woff2');
+    src: url('fonts/BeausiteClassicWeb-Semibold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -685,7 +685,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   /* ---- DYNAMIC CYCLING TEXT ---- */
   const words = [
     'Party','Experiences','Events','Immersive','Escapism','Celebrate',
@@ -749,39 +749,7 @@
     requestAnimationFrame(loop);
   })();
 
-  // Floating CTA visibility
-  const floatCta = document.getElementById('floatCta');
-  const heroHeight = document.querySelector('.hero').offsetHeight;
-  const contactSection = document.getElementById('contact');
-  // Detect if CTA overlaps dark/image sections and toggle ring text colour
-  const darkSections = document.querySelectorAll('.hero, .gallery-item, .band-text, .scatter, [style*="background:#1C3127"], [style*="background:var(--yes-dark)"]');
-  function updateCtaColour(){
-    const ctaRect = floatCta.getBoundingClientRect();
-    const ctaCX = ctaRect.left + ctaRect.width/2;
-    const ctaCY = ctaRect.top + ctaRect.height/2;
-    let onDark = false;
-    darkSections.forEach(sec=>{
-      const r = sec.getBoundingClientRect();
-      if(ctaCX >= r.left && ctaCX <= r.right && ctaCY >= r.top && ctaCY <= r.bottom){
-        onDark = true;
-      }
-    });
-    floatCta.classList.toggle('on-dark', onDark);
-  }
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const contactTop = contactSection.getBoundingClientRect().top + scrollY - window.innerHeight * 0.5;
-    if(scrollY > heroHeight * 0.6 && scrollY < contactTop) {
-      floatCta.classList.add('visible');
-    } else {
-      floatCta.classList.remove('visible');
-    }
-    updateCtaColour();
-  },{passive:true});
-  window.addEventListener('resize', updateCtaColour);
-  updateCtaColour();
-
-  document.querySelectorAll('a,button,h1,h2,h3,h4,h5,h6,p,li,span,.cta-btn,.float-cta,.intro-lines,.scatter-line,.services-col li,.band-text,.hero-tagline,.hero-tagline-sub,.section-label,.nav-word').forEach(el=>{
+  document.querySelectorAll('a,button,h1,h2,h3,h4,h5,h6,p,li,span,.cta-btn,.intro-lines,.scatter-line,.services-col li,.band-text,.hero-tagline,.hero-tagline-sub,.section-label,.nav-word').forEach(el=>{
     el.addEventListener('mouseenter',()=>{trail.classList.add('hovering')});
     el.addEventListener('mouseleave',()=>{trail.classList.remove('hovering')});
   });
