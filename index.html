@@ -131,11 +131,7 @@
   .cursor-trail.hovering { width:22px; height:22px; opacity:.9; }
   @media(hover:none),(pointer:coarse){
     html,body,*{cursor:auto!important}
-    h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,h6:hover,
-    p:hover,li:hover,span:hover,strong:hover,em:hover,
-    .hero-tagline:hover,.hero-tagline-sub:hover,.section-label:hover,.nav-word:hover,
-    .scatter-line:hover,.intro-lines span:hover,.band-text:hover,.services-col li:hover,
-    .scatter-line:hover em,.intro-lines span:hover em { color:inherit !important; }
+    .services-col li:hover { color:inherit !important; }
     .cursor-dot,.cursor-trail{display:none!important}
   }
 
@@ -192,26 +188,13 @@
   nav.scrolled .nav-links a { color:var(--yes-dark); }
   .nav-links a:hover { color:var(--yes-orange); }
 
-  /* ===== TEXT HOVER (orange on hover) ===== */
-  h1, h2, h3, h4, h5, h6, p, li, span, a,
-  .hero-tagline, .hero-tagline-sub, .section-label, .nav-word,
-  .scatter-line, .intro-lines span, .band-text, .services-col li {
+  /* ===== TEXT HOVER (orange on hover — only interactive elements) ===== */
+  .nav-links a, .cta-btn, .services-col li, .scatter-line, .intro-lines span {
     transition:color .25s ease;
   }
-  h1, h2, h3, h4, h5, h6, p, li, span, strong, em, a,
-  .hero-tagline, .hero-tagline-sub, .section-label, .nav-word,
-  .scatter-line, .intro-lines span, .band-text, .services-col li {
-    transition: color .25s ease;
-  }
-  h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover,
-  p:hover, li:hover, span:hover, strong:hover,
-  .hero-tagline:hover, .hero-tagline-sub:hover, .section-label:hover, .nav-word:hover,
-  .scatter-line:hover, .intro-lines span:hover, .band-text:hover, .services-col li:hover {
+  .services-col li:hover, .scatter-line:hover, .intro-lines span:hover {
     color:var(--yes-orange) !important;
   }
-  /* Orange accents flip to green on hover */
-  em, .scatter-line em, .intro-lines span em { transition: color .25s ease; }
-  em:hover, .scatter-line em:hover, .intro-lines span em:hover,
   .scatter-line:hover em, .intro-lines span:hover em { color:var(--yes-dark) !important; }
 
   /* ===== HERO ===== */
@@ -736,7 +719,7 @@
     requestAnimationFrame(loop);
   })();
 
-  document.querySelectorAll('a,button,h1,h2,h3,h4,h5,h6,p,li,span,.cta-btn,.intro-lines,.scatter-line,.services-col li,.band-text,.hero-tagline,.hero-tagline-sub,.section-label,.nav-word').forEach(el=>{
+  document.querySelectorAll('a,button,.cta-btn,.nav-links a,.services-col li,.scatter-line,.intro-lines span').forEach(el=>{
     el.addEventListener('mouseenter',()=>{trail.classList.add('hovering')});
     el.addEventListener('mouseleave',()=>{trail.classList.remove('hovering')});
   });
