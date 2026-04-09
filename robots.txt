@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yesworld.netlify.app/sitemap.xml
+Sitemap: https://yesandworld.com/sitemap.xml
