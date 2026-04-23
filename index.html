@@ -803,11 +803,15 @@
   window.addEventListener('resize',runParallax);
   runParallax();
 
-  // Floating CTA — show after scrolling past hero
+  // Floating CTA — show after scrolling past hero, hide over contact section
   const floatCta=document.getElementById('floatCta');
+  const contactSection=document.getElementById('contact');
   if(floatCta){
     window.addEventListener('scroll',()=>{
-      if(window.scrollY>window.innerHeight*.5){floatCta.classList.add('visible');}
+      const past=window.scrollY>window.innerHeight*.5;
+      const contactTop=contactSection?contactSection.getBoundingClientRect().top:Infinity;
+      const overContact=contactTop<window.innerHeight*.9;
+      if(past && !overContact){floatCta.classList.add('visible');}
       else{floatCta.classList.remove('visible');}
     },{passive:true});
   }
