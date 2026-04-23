@@ -40,7 +40,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "LocalBusiness"],
   "name": "Yes&",
   "url": "https://www.yesandworld.com/",
   "logo": "https://www.yesandworld.com/images/yes-logo.svg",
@@ -238,8 +238,9 @@
   section { padding:0 40px; }
   .section-pad { padding-top:140px; padding-bottom:120px; }
   .section-label {
+    font-family:var(--sans);
     font-size:.72rem; font-weight:400; letter-spacing:.12em; text-transform:uppercase;
-    color:var(--yes-mid); margin-bottom:40px;
+    color:var(--yes-mid); margin-bottom:40px; margin-top:0;
   }
 
   /* ===== INTRO ===== */
@@ -592,7 +593,7 @@
 
 <!-- Services -->
 <section class="services section-pad" id="services">
-  <p class="section-label reveal">Our services</p>
+  <h2 class="section-label reveal">Our services</h2>
   <p class="services-intro reveal">
     More than party planning — Yes& sets the tone and defines what comes next.
   </p>
@@ -625,7 +626,7 @@
 
 <!-- Story -->
 <section class="story section-pad" id="story">
-  <p class="section-label reveal">Our story</p>
+  <h2 class="section-label reveal">Our story</h2>
   <div class="story-grid">
     <div class="story-text reveal">
       <p>Yes& founder Amy Rowe trained in drama in New York City, studying the Meisner technique, a discipline rooted in presence, intuition and deep listening. That philosophy still shapes everything we create.</p>
@@ -651,7 +652,7 @@
     Whether it's an idea taking shape or a conversation worth starting — we'd love to hear from you.
   </p>
   <div class="reveal" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-    <a href="mailto:hello@yesandstudio.com" class="cta-btn">Email us</a>
+    <a href="mailto:hello@yesandworld.com" class="cta-btn">Email us</a>
     <a href="https://wa.me/447745535737" target="_blank" rel="noopener" class="cta-btn">WhatsApp</a>
   </div>
 </section>
