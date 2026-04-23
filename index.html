@@ -47,8 +47,13 @@
   "description": "Immersive experience design company crafting experiential events, brand experiences and cultural moments.",
   "founder": { "@type": "Person", "name": "Amy Rowe" },
   "areaServed": "GB",
-  "knowsAbout": ["immersive experiences", "experiential events", "experience design", "event production"],
-  "sameAs": []
+  "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
+  "contactPoint": { "@type": "ContactPoint", "telephone": "+44-7745-535737", "contactType": "customer service" },
+  "knowsAbout": ["immersive experiences", "experiential events", "experience design", "event production", "brand experiences", "cultural events"],
+  "sameAs": [
+    "https://www.instagram.com/yesandworld_/",
+    "https://www.linkedin.com/company/yesandworld/"
+  ]
 }
 </script>
 
@@ -214,9 +219,13 @@
   .hero-content { position:relative; z-index:3; padding:0 40px 56px; }
 
   .hero-tagline {
-    font-family:var(--serif); font-weight:400;
+    font-family:var(--serif); font-weight:400; margin:0;
     font-size:clamp(1.6rem,3vw,2.4rem); line-height:1.3;
     color:var(--yes-light); max-width:500px;
+  }
+  .visually-hidden {
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
   }
 
   .hero-tagline-sub {
@@ -543,11 +552,12 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-image">
-    <img src="images/hero-portrait.jpg" alt="Yes& hero" />
+    <img src="images/hero-portrait.jpg" alt="Yes& immersive experience — bubble-helmeted performers in atmospheric smoke" />
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="hero-tagline">Thoughtful by design.</p>
+    <h1 class="hero-tagline">Thoughtful by design.</h1>
+    <p class="visually-hidden">Yes& — London-based immersive experience design company creating experiential events, brand experiences and cultural moments.</p>
   </div>
 </section>
 
