@@ -16,8 +16,8 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.yesandworld.com/">
 <meta property="og:image" content="https://www.yesandworld.com/images/hero-portrait.jpg">
-<meta property="og:image:width" content="1600">
-<meta property="og:image:height" content="2400">
+<meta property="og:image:width" content="2000">
+<meta property="og:image:height" content="1333">
 <meta property="og:site_name" content="Yes&">
 <meta property="og:locale" content="en_GB">
 
@@ -28,13 +28,13 @@
 <meta name="twitter:image" content="https://www.yesandworld.com/images/hero-portrait.jpg">
 
 <!-- Favicons -->
-<link rel="icon" type="image/svg+xml" href="images/yes-logo.svg">
+<link rel="icon" type="image/svg+xml" href="/images/yes-logo.svg">
 <meta name="theme-color" content="#1C3127">
 
 <!-- Font preload (speeds up LCP) -->
-<link rel="preload" href="fonts/BradfordLLSub-Book.woff" as="font" type="font/woff" crossorigin>
-<link rel="preload" href="fonts/BeausiteClassicWeb-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="images/hero-portrait.jpg" as="image" fetchpriority="high">
+<link rel="preload" href="/fonts/BradfordLLSub-Book.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/fonts/BeausiteClassicWeb-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/images/hero-portrait.jpg" as="image" fetchpriority="high">
 
 <!-- Structured data -->
 <script type="application/ld+json">
@@ -48,7 +48,7 @@
   "founder": { "@type": "Person", "name": "Amy Rowe" },
   "areaServed": "GB",
   "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
-  "contactPoint": { "@type": "ContactPoint", "telephone": "+44-7745-535737", "contactType": "customer service" },
+  "contactPoint": { "@type": "ContactPoint", "email": "hello@yesandworld.com", "contactType": "customer service" },
   "knowsAbout": ["immersive experiences", "experiential events", "experience design", "event production", "brand experiences", "cultural events"],
   "sameAs": [
     "https://www.instagram.com/yesandworld_/",
@@ -61,10 +61,10 @@
   FONT SETUP — Bradford + Beausite Classic
   Swap Google Fonts fallbacks for @font-face when webfonts available.
   
-  @font-face { font-family:'Bradford'; src:url('fonts/Bradford-Regular.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
-  @font-face { font-family:'Bradford'; src:url('fonts/Bradford-Italic.woff2') format('woff2'); font-weight:400; font-style:italic; font-display:swap; }
-  @font-face { font-family:'Beausite Classic'; src:url('fonts/BeausiteClassic-Regular.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
-  @font-face { font-family:'Beausite Classic'; src:url('fonts/BeausiteClassic-Light.woff2') format('woff2'); font-weight:300; font-style:normal; font-display:swap; }
+  @font-face { font-family:'Bradford'; src:url('/fonts/Bradford-Regular.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
+  @font-face { font-family:'Bradford'; src:url('/fonts/Bradford-Italic.woff2') format('woff2'); font-weight:400; font-style:italic; font-display:swap; }
+  @font-face { font-family:'Beausite Classic'; src:url('/fonts/BeausiteClassic-Regular.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
+  @font-face { font-family:'Beausite Classic'; src:url('/fonts/BeausiteClassic-Light.woff2') format('woff2'); font-weight:300; font-style:normal; font-display:swap; }
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,30 +73,30 @@
   /* ===== BRAND FONTS ===== */
   @font-face {
     font-family: 'Bradford';
-    src: url('fonts/BradfordLLSub-Book.woff') format('woff');
+    src: url('/fonts/BradfordLLSub-Book.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
   @font-face {
     font-family: 'Bradford';
-    src: url('fonts/BradfordLLSub-BookItalic.woff2') format('woff2'),
-         url('fonts/BradfordLLSub-BookItalic.woff') format('woff');
+    src: url('/fonts/BradfordLLSub-BookItalic.woff2') format('woff2'),
+         url('/fonts/BradfordLLSub-BookItalic.woff') format('woff');
     font-weight: 400;
     font-style: italic;
     font-display: swap;
   }
   @font-face {
     font-family: 'Beausite Classic';
-    src: url('fonts/BeausiteClassicWeb-Regular.woff2') format('woff2'),
-         url('fonts/BeausiteClassicWeb-Regular.woff') format('woff');
+    src: url('/fonts/BeausiteClassicWeb-Regular.woff2') format('woff2'),
+         url('/fonts/BeausiteClassicWeb-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
   @font-face {
     font-family: 'Beausite Classic';
-    src: url('fonts/BeausiteClassicWeb-Semibold.woff2') format('woff2');
+    src: url('/fonts/BeausiteClassicWeb-Semibold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -230,8 +230,8 @@
 
   .hero-tagline-sub {
     font-family:var(--sans);
-    font-size:.82rem; font-weight:300; letter-spacing:.12em; text-transform:uppercase;
-    color:rgba(248,248,248,.55); margin-top:16px;
+    font-size:.9rem; font-weight:300; letter-spacing:.02em; line-height:1.5;
+    color:rgba(248,248,248,.7); margin-top:16px; max-width:460px;
   }
 
   /* ===== SECTIONS (shared) ===== */
@@ -354,6 +354,89 @@
     background:var(--yes-orange); border-color:var(--yes-orange); color:var(--yes-light);
   }
 
+  /* ===== TESTIMONIALS ===== */
+  .testimonials {
+    position:relative; overflow:hidden;
+    background:var(--yes-dark); color:var(--yes-light);
+    padding:clamp(80px,9vw,120px) 40px;
+  }
+  .testimonials-inner { max-width:1100px; margin:0 auto; position:relative; z-index:2; }
+  .testimonials .section-label { color:rgba(248,248,248,.45); margin-bottom:44px; }
+
+  .testimonials-mark {
+    position:absolute; right:-5%; top:50%; transform:translateY(-50%);
+    font-family:var(--serif); font-style:italic;
+    font-size:clamp(22rem,42vw,38rem); line-height:.75;
+    color:var(--yes-orange); opacity:.12;
+    pointer-events:none; user-select:none; z-index:1;
+  }
+
+  .t-stage {
+    position:relative; height:auto;
+    transition:height .55s cubic-bezier(.25,.1,.25,1);
+  }
+  .t-slide {
+    position:absolute; top:0; left:0; right:0; visibility:hidden;
+  }
+  .t-slide.is-active { visibility:visible; }
+
+  .t-quote {
+    font-family:var(--serif); font-weight:400;
+    font-size:clamp(1.5rem,3.4vw,2.7rem); line-height:1.3;
+    margin:0 0 32px; max-width:17em;
+  }
+  .t-quote em { font-style:italic; color:var(--yes-orange); }
+  .t-quote .w {
+    display:inline-block; opacity:0; transform:translateY(.55em);
+  }
+  .t-slide.is-active .t-quote .w {
+    opacity:1; transform:translateY(0);
+    transition:opacity .5s cubic-bezier(.25,.1,.25,1), transform .55s cubic-bezier(.25,.1,.25,1);
+  }
+  .t-cite {
+    font-family:var(--sans); font-size:.72rem; letter-spacing:.14em;
+    text-transform:uppercase; color:rgba(248,248,248,.55);
+    opacity:0; transform:translateY(8px);
+  }
+  .t-slide.is-active .t-cite {
+    opacity:1; transform:translateY(0);
+    transition:opacity .5s ease .35s, transform .5s ease .35s;
+  }
+
+  /* long quote sits smaller so the stage stays balanced */
+  .t-slide[data-size="small"] .t-quote {
+    font-size:clamp(1.05rem,1.9vw,1.5rem); line-height:1.5; max-width:24em;
+  }
+
+  .t-controls {
+    display:flex; align-items:center; gap:28px; margin-top:40px;
+    position:relative; z-index:2;
+  }
+  .t-dot {
+    background:none; border:0; padding:0 0 10px; cursor:pointer;
+    font-family:var(--sans); font-size:.7rem; letter-spacing:.14em;
+    color:rgba(248,248,248,.4);
+    position:relative; transition:color .4s ease;
+  }
+  .t-dot::after {
+    content:""; position:absolute; left:0; bottom:0; height:1px; width:100%;
+    background:rgba(248,248,248,.18);
+  }
+  .t-dot .t-fill {
+    position:absolute; left:0; bottom:0; height:1px; width:0;
+    background:var(--yes-orange);
+  }
+  .t-dot[aria-selected="true"] { color:var(--yes-light); }
+  .t-dot[aria-selected="true"] .t-fill { width:100%; transition:width 7s linear; }
+  .t-dot:hover { color:var(--yes-light); }
+
+  @media (prefers-reduced-motion:reduce) {
+    .t-slide.is-active .t-quote .w,
+    .t-slide.is-active .t-cite { transition:none; }
+    .t-dot[aria-selected="true"] .t-fill { transition:none; width:100%; }
+    .t-stage { transition:none; }
+  }
+
   /* ===== STORY ===== */
   .story { max-width:1100px; margin:0 auto; border-top:1px solid rgba(28,49,39,.1); }
   .story-grid {
@@ -445,6 +528,11 @@
 
     .services-grid{grid-template-columns:1fr;gap:48px}
     .story-grid{grid-template-columns:1fr;gap:40px}
+    .testimonials{padding:72px 24px}
+    .testimonials .section-label{margin-bottom:32px}
+    .t-quote{margin-bottom:24px}
+    .t-controls{margin-top:32px}
+    .testimonials-mark{font-size:24rem;right:-14%;opacity:.1}
     .story-image{max-width:480px}
     footer{padding:20px 24px;flex-direction:column;gap:10px}
   }
@@ -506,7 +594,7 @@
     .hero { height:75vh; min-height:450px; }
     .hero-content { padding:0 20px 32px; }
     .hero-tagline { font-size:1.35rem; line-height:1.3; max-width:90%; }
-    .hero-tagline-sub { font-size:.7rem; margin-top:12px; }
+    .hero-tagline-sub { font-size:.82rem; margin-top:12px; max-width:90%; }
     section { padding:0 20px; }
     .section-pad { padding-top:72px; padding-bottom:64px; }
     .section-label { font-size:.68rem; margin-bottom:28px; }
@@ -518,6 +606,12 @@
     .band { padding:40px 20px !important; }
     .band-text { font-size:1.35rem !important; line-height:1.4 !important; }
     .story-grid { gap:32px; }
+    .testimonials{padding:56px 20px}
+    .testimonials .section-label{margin-bottom:24px}
+    .t-quote{margin-bottom:20px}
+    .t-controls{margin-top:28px;gap:22px}
+    .testimonials-mark{display:none}
+
     .story-text p { font-size:1rem; line-height:1.6; }
     .services-col { margin-bottom:32px; }
     .services-col h3 { font-size:1rem; margin-bottom:16px; }
@@ -535,7 +629,7 @@
 <!-- Nav -->
 <nav id="mainNav">
   <div class="nav-logo">
-    <img class="nav-logo-svg" src="images/yes-logo.svg" alt="Yes&amp;" width="120" height="48">
+    <img class="nav-logo-svg" src="/images/yes-logo.svg" alt="Yes&amp;" width="120" height="48">
     <span class="nav-word-wrapper" id="wordWrapper"></span>
   </div>
   <ul class="nav-links">
@@ -548,17 +642,18 @@
 
 
 <!-- Floating CTA -->
-<a href="https://wa.me/447745535737" class="float-cta" id="floatCta">Let's talk</a>
+<a href="mailto:hello@yesandworld.com?subject=Enquiry%20via%20yesandworld.com" class="float-cta" id="floatCta">Let's talk</a>
 
 <!-- Hero -->
 <section class="hero">
   <div class="hero-image">
-    <img src="images/hero-portrait.jpg" alt="Yes& immersive experience — bubble-helmeted performers in atmospheric smoke" />
+    <img src="/images/hero-portrait.jpg" alt="Yes& immersive experience — bubble-helmeted performers in atmospheric smoke" />
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1 class="hero-tagline">Thoughtful by design.</h1>
-    <p class="visually-hidden">Yes& — London-based immersive experience design company creating experiential events, brand experiences and cultural moments.</p>
+    <p class="hero-tagline-sub">Experience design in London. Events that bring people together and live on as stories.</p>
+    <p class="visually-hidden">Yes&amp; is a London-based experience design company creating private events, immersive experiences and cultural moments for private clients.</p>
   </div>
 </section>
 
@@ -579,15 +674,15 @@
 <!-- Gallery -->
 <section class="gallery" id="work">
   <div class="gallery-grid">
-    <div class="gallery-item gi-1 reveal"><img src="images/gallery/g1.jpg" alt="Blue bubble performer on garden lawn" loading="lazy"></div>
-    <div class="gallery-item gi-2 reveal"><img src="images/gallery/g2.jpg" alt="Lion-masked performers descending ornate staircase" loading="lazy"></div>
-    <div class="gallery-item gi-3 reveal"><img src="images/gallery/g3.jpg" alt="Dancer turning with ruffle sleeve in ballroom" loading="lazy"></div>
-    <div class="gallery-item gi-4 reveal"><img src="images/gallery/g4.jpg" alt="Red military jacket silhouette in spotlight" loading="lazy"></div>
-    <div class="gallery-item gi-5 reveal"><img src="images/gallery/g5.jpg" alt="Heart and arrows favour detail" loading="lazy"></div>
-    <div class="gallery-item gi-6 reveal"><img src="images/gallery/g6.jpg" alt="Pinstripe suit with paisley vest costume detail" loading="lazy"></div>
-    <div class="gallery-item gi-7 reveal"><img src="images/gallery/g7.jpg" alt="Typewriter hands with statement rings" loading="lazy"></div>
-    <div class="gallery-item gi-8 reveal"><img src="images/gallery/g8.jpg" alt="Polka dot leather duo at grand entrance" loading="lazy"></div>
-    <div class="gallery-item gi-9 reveal"><img src="images/gallery/g9.jpg" alt="Paris runway trio in black and white" loading="lazy"></div>
+    <div class="gallery-item gi-1 reveal"><img src="/images/gallery/g1.jpg" alt="Blue bubble performer on garden lawn" loading="lazy"></div>
+    <div class="gallery-item gi-2 reveal"><img src="/images/gallery/g2.jpg" alt="Lion-masked performers descending ornate staircase" loading="lazy"></div>
+    <div class="gallery-item gi-3 reveal"><img src="/images/gallery/g3.jpg" alt="Dancer turning with ruffle sleeve in ballroom" loading="lazy"></div>
+    <div class="gallery-item gi-4 reveal"><img src="/images/gallery/g4.jpg" alt="Red military jacket silhouette in spotlight" loading="lazy"></div>
+    <div class="gallery-item gi-5 reveal"><img src="/images/gallery/g5.jpg" alt="Heart and arrows favour detail" loading="lazy"></div>
+    <div class="gallery-item gi-6 reveal"><img src="/images/gallery/g6.jpg" alt="Pinstripe suit with paisley vest costume detail" loading="lazy"></div>
+    <div class="gallery-item gi-7 reveal"><img src="/images/gallery/g7.jpg" alt="Typewriter hands with statement rings" loading="lazy"></div>
+    <div class="gallery-item gi-8 reveal"><img src="/images/gallery/g8.jpg" alt="Polka dot leather duo at grand entrance" loading="lazy"></div>
+    <div class="gallery-item gi-9 reveal"><img src="/images/gallery/g9.jpg" alt="Paris runway trio in black and white" loading="lazy"></div>
   </div>
 </section>
 
@@ -620,7 +715,7 @@
     </div>
   </div>
   <div class="services-cta-wrap reveal">
-    <a href="https://wa.me/447745535737" target="_blank" rel="noopener" class="cta-btn">Start a conversation</a>
+    <a href="mailto:hello@yesandworld.com?subject=Enquiry%20via%20yesandworld.com" class="cta-btn">Start a conversation</a>
   </div>
 </section>
 
@@ -635,8 +730,33 @@
       <p>Borrowed from theatrical improvisation, Yes& is a philosophy as much as a name. It reflects an open, additive way of working, built on dialogue, momentum and possibility. Always asking what comes next.</p>
     </div>
     <div class="story-image reveal">
-      <img src="images/gallery/story.jpg" alt="Typewriter hands in black and white" loading="lazy">
+      <img src="/images/gallery/story.jpg" alt="Typewriter hands in black and white" loading="lazy">
     </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials" aria-roledescription="carousel" aria-label="Client testimonials">
+  <span class="testimonials-mark" aria-hidden="true">&amp;</span>
+  <div class="testimonials-inner">
+    <h2 class="section-label">In their words</h2>
+
+    <div class="t-stage" id="tStage" aria-live="polite">
+      <blockquote class="t-slide is-active" data-size="large">
+        <p class="t-quote">&ldquo;My experience with Yes&amp; has been nothing short of <em>magical</em>.&rdquo;</p>
+        <cite class="t-cite">Private client</cite>
+      </blockquote>
+      <blockquote class="t-slide" data-size="large">
+        <p class="t-quote">&ldquo;Considerate, professional and knowledgeable. They are <em>everything</em> you could ask for in an event company.&rdquo;</p>
+        <cite class="t-cite">Luxury concierge</cite>
+      </blockquote>
+      <blockquote class="t-slide" data-size="small">
+        <p class="t-quote">&ldquo;What stayed with me most is how <em>intentional</em> every detail felt on the night. Nothing was arbitrary. The pacing, the atmosphere, the way guests moved through the space, it all built a kind of <em>narrative</em> that people could step into.&rdquo;</p>
+        <cite class="t-cite">Fashion brand</cite>
+      </blockquote>
+    </div>
+
+    <div class="t-controls" id="tControls" role="tablist"></div>
   </div>
 </section>
 
@@ -652,8 +772,7 @@
     Whether it's an idea taking shape or a conversation worth starting — we'd love to hear from you.
   </p>
   <div class="reveal" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-    <a href="mailto:amy@yesandworld.com" class="cta-btn">Email us</a>
-    <a href="https://wa.me/447745535737" target="_blank" rel="noopener" class="cta-btn">WhatsApp</a>
+    <a href="mailto:hello@yesandworld.com?subject=Enquiry%20via%20yesandworld.com" class="cta-btn">Email us</a>
   </div>
 </section>
 
@@ -663,6 +782,7 @@
   <div class="footer-links">
     <a href="https://www.instagram.com/yesandworld_/" target="_blank" rel="noopener">Instagram</a>
     <a href="https://www.linkedin.com/company/yesandworld/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="/privacy.html">Privacy</a>
   </div>
 </footer>
 
@@ -804,6 +924,115 @@
   runParallax();
 
   // Floating CTA — show after scrolling past hero, hide over contact section
+  /* ===== TESTIMONIAL CAROUSEL ===== */
+  (function(){
+    const stage = document.getElementById('tStage');
+    const controls = document.getElementById('tControls');
+    if(!stage || !controls) return;
+
+    const slides = Array.from(stage.querySelectorAll('.t-slide'));
+    if(slides.length < 2) return;
+
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const HOLD = 7000;
+    let index = 0, timer = null, running = false;
+
+    // split each quote into words so they can rise in sequence
+    slides.forEach(slide => {
+      const q = slide.querySelector('.t-quote');
+      const words = q.innerHTML.trim().split(/\s+/);
+      q.innerHTML = words.map(w => '<span class="w">' + w + '</span>').join(' ');
+    });
+
+    function paintWords(slide, on){
+      const words = slide.querySelectorAll('.w');
+      words.forEach((w,i) => {
+        w.style.transitionDelay = (on && !reduced) ? (i * 28) + 'ms' : '0ms';
+      });
+    }
+
+    slides.forEach((s,i) => {
+      const b = document.createElement('button');
+      b.className = 't-dot';
+      b.type = 'button';
+      b.setAttribute('role','tab');
+      b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      b.setAttribute('aria-label','Testimonial ' + (i+1) + ' of ' + slides.length);
+      b.innerHTML = '0' + (i+1) + '<span class="t-fill"></span>';
+      b.addEventListener('click', () => { go(i); restart(); });
+      controls.appendChild(b);
+    });
+    const dots = Array.from(controls.querySelectorAll('.t-dot'));
+
+    function setHeight(){
+      stage.style.height = slides[index].offsetHeight + 'px';
+    }
+
+    function resetFill(dot){
+      const fill = dot.querySelector('.t-fill');
+      fill.style.transition = 'none';
+      fill.style.width = '0';
+      void fill.offsetWidth;
+      fill.style.transition = '';
+    }
+
+    function go(next){
+      if(next === index) return;
+      const current = slides[index];
+      paintWords(current, false);
+      current.classList.remove('is-active');
+      dots[index].setAttribute('aria-selected','false');
+      resetFill(dots[index]);
+
+      index = next;
+      const slide = slides[index];
+      paintWords(slide, true);
+      slide.classList.add('is-active');
+      dots[index].setAttribute('aria-selected','true');
+      resetFill(dots[index]);
+      setHeight();
+    }
+
+    function advance(){ go((index + 1) % slides.length); }
+    function start(){ if(timer) clearInterval(timer); timer = setInterval(advance, HOLD); }
+    function stop(){ if(timer) clearInterval(timer); timer = null; }
+    function restart(){ stop(); if(running) start(); }
+
+    // first slide animates in, then the clock starts, only once it is on screen
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if(e.isIntersecting){
+          if(!running){
+            running = true;
+            paintWords(slides[0], true);
+            slides[0].classList.add('is-active');
+            resetFill(dots[0]);
+            dots[0].setAttribute('aria-selected','true');
+            setHeight();
+            start();
+          }
+        } else {
+          stop();
+        }
+      });
+    }, {threshold:0.35});
+    io.observe(stage);
+
+    setHeight();
+    window.addEventListener('resize', setHeight);
+    if(document.fonts && document.fonts.ready){ document.fonts.ready.then(setHeight); }
+
+    const section = document.getElementById('testimonials');
+    section.addEventListener('mouseenter', stop);
+    section.addEventListener('mouseleave', () => { if(running) start(); });
+    section.addEventListener('focusin', stop);
+    section.addEventListener('focusout', () => { if(running) start(); });
+    section.addEventListener('keydown', e => {
+      if(e.key === 'ArrowRight'){ advance(); restart(); }
+      if(e.key === 'ArrowLeft'){ go((index - 1 + slides.length) % slides.length); restart(); }
+    });
+  })();
+
   const floatCta=document.getElementById('floatCta');
   const contactSection=document.getElementById('contact');
   if(floatCta){
@@ -816,5 +1045,7 @@
     },{passive:true});
   }
 </script>
+
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "862952881b8548328317b2ea4d6b5528"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
