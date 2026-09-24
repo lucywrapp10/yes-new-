@@ -34,7 +34,7 @@
 <!-- Font preload (speeds up LCP) -->
 <link rel="preload" href="/fonts/BradfordLLSub-Book.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="/fonts/BeausiteClassicWeb-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/images/hero-portrait.jpg" as="image" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" imagesrcset="/images/hero-portrait-640.webp 640w, /images/hero-portrait-1024.webp 1024w, /images/hero-portrait-1600.webp 1600w, /images/hero-portrait-2000.webp 2000w" imagesizes="(max-width:600px) 115vh, (max-width:900px) 120vh, 100vw" fetchpriority="high">
 
 <!-- Structured data -->
 <script type="application/ld+json">
@@ -70,6 +70,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <style>
+  picture { display:contents; }
   /* ===== BRAND FONTS ===== */
   @font-face {
     font-family: 'Bradford';
@@ -647,7 +648,7 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-image">
-    <img src="/images/hero-portrait.jpg" alt="Yes& immersive experience — bubble-helmeted performers in atmospheric smoke" />
+    <picture><source type="image/webp" srcset="/images/hero-portrait-640.webp 640w, /images/hero-portrait-1024.webp 1024w, /images/hero-portrait-1600.webp 1600w, /images/hero-portrait-2000.webp 2000w" sizes="(max-width:600px) 115vh, (max-width:900px) 120vh, 100vw"><img src="/images/hero-portrait.jpg" fetchpriority="high" width="2000" height="1333" alt="Yes& immersive experience — bubble-helmeted performers in atmospheric smoke" /></picture>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -674,15 +675,15 @@
 <!-- Gallery -->
 <section class="gallery" id="work">
   <div class="gallery-grid">
-    <div class="gallery-item gi-1 reveal"><img src="/images/gallery/g1.jpg" alt="Blue bubble performer on garden lawn" loading="lazy"></div>
-    <div class="gallery-item gi-2 reveal"><img src="/images/gallery/g2.jpg" alt="Lion-masked performers descending ornate staircase" loading="lazy"></div>
-    <div class="gallery-item gi-3 reveal"><img src="/images/gallery/g3.jpg" alt="Dancer turning with ruffle sleeve in ballroom" loading="lazy"></div>
-    <div class="gallery-item gi-4 reveal"><img src="/images/gallery/g4.jpg" alt="Red military jacket silhouette in spotlight" loading="lazy"></div>
-    <div class="gallery-item gi-5 reveal"><img src="/images/gallery/g5.jpg" alt="Heart and arrows favour detail" loading="lazy"></div>
-    <div class="gallery-item gi-6 reveal"><img src="/images/gallery/g6.jpg" alt="Pinstripe suit with paisley vest costume detail" loading="lazy"></div>
-    <div class="gallery-item gi-7 reveal"><img src="/images/gallery/g7.jpg" alt="Typewriter hands with statement rings" loading="lazy"></div>
-    <div class="gallery-item gi-8 reveal"><img src="/images/gallery/g8.jpg" alt="Polka dot leather duo at grand entrance" loading="lazy"></div>
-    <div class="gallery-item gi-9 reveal"><img src="/images/gallery/g9.jpg" alt="Paris runway trio in black and white" loading="lazy"></div>
+    <div class="gallery-item gi-1 reveal"><picture><source type="image/webp" srcset="/images/gallery/g1-640.webp 640w, /images/gallery/g1-1024.webp 1024w, /images/gallery/g1-1333.webp 1333w" sizes="(max-width:600px) 100vw, (max-width:900px) 100vw, 55vw"><img src="/images/gallery/g1.jpg" alt="Blue bubble performer on garden lawn" loading="lazy"></picture></div>
+    <div class="gallery-item gi-2 reveal"><picture><source type="image/webp" srcset="/images/gallery/g2-640.webp 640w, /images/gallery/g2-1024.webp 1024w, /images/gallery/g2-1600.webp 1600w, /images/gallery/g2-2000.webp 2000w" sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 67vw"><img src="/images/gallery/g2.jpg" alt="Lion-masked performers descending ornate staircase" loading="lazy"></picture></div>
+    <div class="gallery-item gi-3 reveal"><picture><source type="image/webp" srcset="/images/gallery/g3-640.webp 640w, /images/gallery/g3-1024.webp 1024w, /images/gallery/g3-1333.webp 1333w" sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 34vw"><img src="/images/gallery/g3.jpg" alt="Dancer turning with ruffle sleeve in ballroom" loading="lazy"></picture></div>
+    <div class="gallery-item gi-4 reveal"><picture><source type="image/webp" srcset="/images/gallery/g4-640.webp 640w, /images/gallery/g4-1024.webp 1024w, /images/gallery/g4-1333.webp 1333w" sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 34vw"><img src="/images/gallery/g4.jpg" alt="Red military jacket silhouette in spotlight" loading="lazy"></picture></div>
+    <div class="gallery-item gi-5 reveal"><picture><source type="image/webp" srcset="/images/gallery/g5-640.webp 640w, /images/gallery/g5-1024.webp 1024w, /images/gallery/g5-1600.webp 1600w, /images/gallery/g5-2000.webp 2000w" sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 34vw"><img src="/images/gallery/g5.jpg" alt="Heart and arrows favour detail" loading="lazy"></picture></div>
+    <div class="gallery-item gi-6 reveal"><picture><source type="image/webp" srcset="/images/gallery/g6-640.webp 640w, /images/gallery/g6-1024.webp 1024w, /images/gallery/g6-1333.webp 1333w" sizes="(max-width:600px) 100vw, (max-width:900px) 100vw, 55vw"><img src="/images/gallery/g6.jpg" alt="Pinstripe suit with paisley vest costume detail" loading="lazy"></picture></div>
+    <div class="gallery-item gi-7 reveal"><picture><source type="image/webp" srcset="/images/gallery/g7-640.webp 640w, /images/gallery/g7-1024.webp 1024w, /images/gallery/g7-1333.webp 1333w" sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 34vw"><img src="/images/gallery/g7.jpg" alt="Typewriter hands with statement rings" loading="lazy"></picture></div>
+    <div class="gallery-item gi-8 reveal"><picture><source type="image/webp" srcset="/images/gallery/g8-640.webp 640w, /images/gallery/g8-1024.webp 1024w, /images/gallery/g8-1333.webp 1333w" sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 34vw"><img src="/images/gallery/g8.jpg" alt="Polka dot leather duo at grand entrance" loading="lazy"></picture></div>
+    <div class="gallery-item gi-9 reveal"><picture><source type="image/webp" srcset="/images/gallery/g9-640.webp 640w, /images/gallery/g9-1024.webp 1024w, /images/gallery/g9-1333.webp 1333w" sizes="(max-width:600px) 100vw, (max-width:900px) 100vw, 34vw"><img src="/images/gallery/g9.jpg" alt="Paris runway trio in black and white" loading="lazy"></picture></div>
   </div>
 </section>
 
@@ -730,7 +731,7 @@
       <p>Borrowed from theatrical improvisation, Yes& is a philosophy as much as a name. It reflects an open, additive way of working, built on dialogue, momentum and possibility. Always asking what comes next.</p>
     </div>
     <div class="story-image reveal">
-      <img src="/images/gallery/story.jpg" alt="Typewriter hands in black and white" loading="lazy">
+      <picture><source type="image/webp" srcset="/images/gallery/story-640.webp 640w, /images/gallery/story-1024.webp 1024w, /images/gallery/story-1333.webp 1333w" sizes="(max-width:600px) 100vw, (max-width:900px) 480px, 550px"><img src="/images/gallery/story.jpg" alt="Typewriter hands in black and white" loading="lazy"></picture>
     </div>
   </div>
 </section>
