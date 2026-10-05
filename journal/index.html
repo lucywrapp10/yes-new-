@@ -6,12 +6,12 @@
 <!-- PREVIEW: switch to "index, follow" on sign-off -->
 <meta name="robots" content="noindex, nofollow">
 <title>Journal | Yes&amp; Experience Design, London</title>
-<meta name="description" content="Notes from Yes&amp; on immersive experiences, private celebrations and how to make an event feel like a world of its own.">
+<meta name="description" content="The Yes&amp; Journal. Notes on immersive experiences, private celebrations and the thinking behind them, from a London experience design company.">
 <link rel="canonical" href="https://www.yesandworld.com/journal/">
 <link rel="icon" type="image/svg+xml" href="/images/yes-logo.svg">
 <meta name="theme-color" content="#1C3127">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Journal | Yes&amp;">
+<meta property="og:title" content="The Yes&amp; Journal">
 <meta property="og:description" content="Notes on immersive experiences and private celebrations.">
 <meta property="og:url" content="https://www.yesandworld.com/journal/">
 <meta property="og:image" content="https://www.yesandworld.com/images/hero-portrait-1600.webp">
@@ -19,113 +19,125 @@
 <meta property="og:locale" content="en_GB">
 <link rel="preload" href="/fonts/BradfordLLSub-Book.woff" as="font" type="font/woff" crossorigin>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Blog","name":"Yes& Journal","url":"https://www.yesandworld.com/journal/","inLanguage":"en-GB",
+{"@context":"https://schema.org","@type":"Blog","name":"The Yes& Journal","url":"https://www.yesandworld.com/journal/","inLanguage":"en-GB",
 "publisher":{"@type":"Organization","name":"Yes&","url":"https://www.yesandworld.com/"},
-"blogPost":[{"@type":"BlogPosting","headline":"Immersive birthday party ideas, and how to make them work","url":"https://www.yesandworld.com/journal/immersive-birthday-party-ideas/","datePublished":"2026-10-20"}]}
+"blogPost":[{"@type":"BlogPosting","headline":"Immersive birthday party ideas: build a world, not a theme","url":"https://www.yesandworld.com/journal/immersive-birthday-party-ideas/","datePublished":"2026-10-20"}]}
 </script>
 <style>
-  @font-face {
-    font-family: 'Bradford';
-    src: url('/fonts/BradfordLLSub-Book.woff') format('woff');
-    font-weight: 400; font-style: normal; font-display: swap;
-  }
-  @font-face {
-    font-family: 'Beausite Classic';
-    src: url('/fonts/BeausiteClassicWeb-Regular.woff2') format('woff2');
-    font-weight: 400; font-style: normal; font-display: swap;
-  }
+  @font-face { font-family:'Bradford'; src:url('/fonts/BradfordLLSub-Book.woff') format('woff'); font-weight:400; font-style:normal; font-display:swap; }
+  @font-face { font-family:'Bradford'; src:url('/fonts/BradfordLLSub-BookItalic.woff2') format('woff2'), url('/fonts/BradfordLLSub-BookItalic.woff') format('woff'); font-weight:400; font-style:italic; font-display:swap; }
+  @font-face { font-family:'Beausite Classic'; src:url('/fonts/BeausiteClassicWeb-Regular.woff2') format('woff2'), url('/fonts/BeausiteClassicWeb-Regular.woff') format('woff'); font-weight:400; font-style:normal; font-display:swap; }
+  @font-face { font-family:'Beausite Classic'; src:url('/fonts/BeausiteClassicWeb-Semibold.woff2') format('woff2'); font-weight:600; font-style:normal; font-display:swap; }
 
   :root {
-    --yes-light:  #F8F8F8;
-    --yes-dark:   #1C3127;
-    --yes-orange: #FE4D02;
-    --yes-mid:    #4A6356;
-    --serif:      'Bradford', Georgia, 'Times New Roman', serif;
-    --sans:       'Beausite Classic', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    --yes-light:#F8F8F8; --yes-dark:#1C3127; --yes-orange:#FE4D02; --yes-mid:#4A6356;
+    --serif:'Bradford', Georgia, 'Times New Roman', serif;
+    --sans:'Beausite Classic', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
   }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:var(--sans); background:var(--yes-light); color:var(--yes-dark); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+  img { display:block; max-width:100%; }
+  em { font-style:italic; }
+  a:focus-visible, button:focus-visible { outline:2px solid var(--yes-orange); outline-offset:4px; }
 
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin:0; background:var(--yes-light); color:var(--yes-dark);
-    font-family:var(--sans); font-weight:400; font-size:1.0625rem; line-height:1.75;
-    -webkit-font-smoothing:antialiased;
-  }
-  img { max-width:100%; height:auto; display:block; }
-  a { color:var(--yes-dark); text-decoration:underline; text-underline-offset:3px; }
-  a:hover { color:var(--yes-orange); }
-  a:focus-visible { outline:2px solid var(--yes-orange); outline-offset:3px; }
+  nav.site { position:fixed; top:0; left:0; right:0; z-index:100; padding:32px 40px; display:flex; justify-content:space-between; align-items:center; transition:background .4s, padding .4s; }
+  nav.site.scrolled { background:rgba(248,248,248,.92); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); padding:20px 40px; }
+  .nav-logo img { height:48px; width:auto; filter:brightness(0) invert(1); transition:filter .4s, height .4s; }
+  nav.site.scrolled .nav-logo img { filter:none; height:38px; }
+  .nav-links { display:flex; gap:28px; list-style:none; }
+  .nav-links a { font-size:.8rem; letter-spacing:.04em; color:var(--yes-light); text-decoration:none; transition:color .3s; }
+  nav.site.scrolled .nav-links a { color:var(--yes-dark); }
+  .nav-links a:hover { color:var(--yes-orange) !important; }
 
-  header.page-nav {
-    display:flex; align-items:center; justify-content:space-between;
-    padding:28px 40px; border-bottom:1px solid rgba(28,49,39,.07);
-  }
-  header.page-nav img { width:120px; }
-  header.page-nav nav a {
-    font-size:.78rem; letter-spacing:.12em; text-transform:uppercase;
-    color:var(--yes-mid); text-decoration:none; margin-left:28px;
-  }
-  header.page-nav nav a:hover { color:var(--yes-orange); }
+  .masthead { position:relative; overflow:hidden; background:var(--yes-dark); color:var(--yes-light); padding:200px 40px 96px; }
+  .masthead-inner { max-width:1100px; margin:0 auto; position:relative; z-index:2; }
+  .masthead h1 { font-family:var(--serif); font-weight:400; font-size:clamp(3.6rem,11vw,9.5rem); line-height:.95; letter-spacing:-.02em; }
+  .masthead p { font-family:var(--serif); font-size:clamp(1.2rem,2.2vw,1.7rem); line-height:1.45; color:rgba(248,248,248,.78); max-width:24em; margin-top:32px; }
+  .masthead p em { color:var(--yes-orange); }
+  .masthead .mark { position:absolute; right:-3%; bottom:-18%; font-family:var(--serif); font-style:italic; font-size:clamp(22rem,46vw,42rem); line-height:.75; color:var(--yes-orange); opacity:.12; pointer-events:none; user-select:none; }
 
-  footer {
-    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;
-    padding:32px 40px; border-top:1px solid rgba(28,49,39,.07);
-    font-size:.8rem; color:var(--yes-mid);
-  }
-  footer a { color:var(--yes-mid); text-decoration:none; margin-left:20px; }
+  .feature { position:relative; display:block; min-height:78vh; max-height:860px; overflow:hidden; color:var(--yes-light); text-decoration:none; background:var(--yes-dark); }
+  .feature img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 45%; transition:transform 1.2s cubic-bezier(.25,.1,.25,1); }
+  .feature:hover img { transform:scale(1.04); }
+  .feature::after { content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(28,49,39,.88) 0%, rgba(28,49,39,.3) 50%, rgba(28,49,39,0) 80%); }
+  .feature-text { position:absolute; left:0; right:0; bottom:0; z-index:2; padding:0 40px 64px; }
+  .feature-inner { max-width:1100px; margin:0 auto; }
+  .feature .label { font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:rgba(248,248,248,.65); margin-bottom:18px; }
+  .feature h2 { font-family:var(--serif); font-weight:400; font-size:clamp(2rem,4.6vw,4rem); line-height:1.06; letter-spacing:-.01em; max-width:14em; }
+  .feature h2 em { color:var(--yes-orange); }
+  .feature p { font-family:var(--serif); font-size:clamp(1.05rem,1.6vw,1.25rem); color:rgba(248,248,248,.8); max-width:32em; margin-top:18px; line-height:1.5; }
+  .feature .read { display:inline-block; margin-top:28px; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; border-bottom:1px solid var(--yes-orange); padding-bottom:6px; }
+  .feature:hover .read { color:var(--yes-orange); }
+  .feature:focus-visible { outline:3px solid var(--yes-orange); outline-offset:-3px; }
+
+  .soon { max-width:1100px; margin:0 auto; padding:96px 40px 0; display:grid; grid-template-columns:1fr 2fr; gap:48px; }
+  .soon h2 { font-family:var(--serif); font-weight:400; font-size:clamp(1.6rem,2.8vw,2.2rem); line-height:1.2; }
+  .soon p { font-family:var(--serif); font-size:1.15rem; line-height:1.65; color:rgba(28,49,39,.82); }
+  .soon a { color:var(--yes-dark); }
+  .soon a:hover { color:var(--yes-orange); }
+
+  .band { background:var(--yes-orange); padding:80px 40px; text-align:center; margin-top:96px; }
+  .band p { font-family:var(--serif); font-style:italic; font-size:clamp(1.5rem,3vw,2.4rem); line-height:1.4; color:var(--yes-dark); max-width:720px; margin:0 auto; }
+
+  footer { padding:24px 40px; display:flex; justify-content:space-between; align-items:center; font-size:.7rem; letter-spacing:.06em; color:var(--yes-mid); border-top:1px solid rgba(28,49,39,.1); }
+  footer a { color:var(--yes-mid); text-decoration:none; transition:color .3s; }
   footer a:hover { color:var(--yes-orange); }
-  .footer-links { display:flex; flex-wrap:wrap; }
+  .footer-links { display:flex; gap:24px; }
 
-  .journal-head { max-width:1100px; margin:0 auto; padding:72px 40px 40px; }
-  .journal-head h1 { font-family:var(--serif); font-weight:400; line-height:1.12; letter-spacing:-.01em; margin:0 0 16px; font-size:clamp(2.6rem,6vw,4.4rem); }
-  .journal-head p { font-family:var(--serif); font-size:clamp(1.15rem,1.9vw,1.4rem); line-height:1.5; color:var(--yes-mid); max-width:32em; margin:0; }
-  .entries { max-width:1100px; margin:0 auto; padding:24px 40px 96px; }
-  .entry { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:48px; align-items:center;
-           text-decoration:none; color:inherit; border-top:1px solid rgba(28,49,39,.12); padding-top:40px; }
-  .entry img { width:100%; aspect-ratio:3/2; object-fit:cover; }
-  .entry h2 { font-family:var(--serif); font-weight:400; font-size:clamp(1.6rem,2.8vw,2.3rem); line-height:1.2; margin:0 0 14px; }
-  .entry p { color:rgba(28,49,39,.85); margin:0 0 20px; }
-  .entry .read { font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:var(--yes-mid); }
-  .entry:hover h2, .entry:hover .read { color:var(--yes-orange); }
-  .entry:focus-visible { outline:2px solid var(--yes-orange); outline-offset:6px; }
-  @media (max-width:800px) {
-    header.page-nav, footer, .journal-head, .entries { padding-left:24px; padding-right:24px; }
-    header.page-nav nav a { margin-left:18px; }
-    .entry { grid-template-columns:1fr; gap:24px; }
-    footer a { margin-left:0; margin-right:20px; }
+  @media (max-width:900px) {
+    nav.site { padding:22px 24px; } nav.site.scrolled { padding:14px 24px; }
+    .nav-logo img { height:36px; } nav.site.scrolled .nav-logo img { height:30px; }
+    .masthead { padding:150px 24px 72px; }
+    .feature { min-height:72vh; } .feature-text { padding:0 24px 44px; }
+    .soon { grid-template-columns:1fr; gap:16px; padding:72px 24px 0; }
+    .band { padding:56px 24px; }
+    footer { flex-direction:column; gap:10px; padding:24px; }
   }
+  @media (max-width:600px) { .nav-links { gap:16px; } .nav-links a { font-size:.72rem; } .masthead .mark { display:none; } }
+  @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .feature img { transition:none; } }
 </style>
 </head>
 <body>
 
-<header class="page-nav">
-  <a href="/" aria-label="Yes& home"><img src="/images/yes-logo.svg" alt="Yes&amp;" width="120" height="48"></a>
-  <nav aria-label="Main">
-    <a href="/journal/" aria-current="page">Journal</a>
-    <a href="/">Back to site</a>
-  </nav>
-</header>
+<nav class="site" aria-label="Main">
+  <a class="nav-logo" href="/" aria-label="Yes& home"><img src="/images/yes-logo.svg" alt="Yes&amp;" width="120" height="48"></a>
+  <ul class="nav-links">
+    <li><a href="/journal/" aria-current="page">Journal</a></li>
+    <li><a href="/#story">Story</a></li>
+    <li><a href="mailto:hello@yesandworld.com?subject=Enquiry%20via%20the%20Journal">Get in touch</a></li>
+  </ul>
+</nav>
 
 <main>
-  <div class="journal-head">
-    <h1>Journal</h1>
-    <p>Notes on immersive experiences, private celebrations and the thinking behind them.</p>
-  </div>
+  <header class="masthead">
+    <div class="mark" aria-hidden="true">&amp;</div>
+    <div class="masthead-inner">
+      <h1>Journal</h1>
+      <p>Notes on immersive experiences, private celebrations and the <em>thinking</em> behind them.</p>
+    </div>
+  </header>
 
-  <div class="entries">
-    <a class="entry" href="/journal/immersive-birthday-party-ideas/">
-      <img src="/images/gallery/g2-1024.webp"
-           srcset="/images/gallery/g2-640.webp 640w, /images/gallery/g2-1024.webp 1024w, /images/gallery/g2-1600.webp 1600w"
-           sizes="(max-width:800px) 100vw, 560px" width="2000" height="1333"
-           alt="Lion-masked performers descending an ornate gilded staircase">
-      <div>
-        <h2>Immersive birthday party ideas, and how to make them work</h2>
-        <p>Most party ideas are themes. An immersive party is a world guests step into. How to build one, and five ideas to start from.</p>
-        <span class="read">Read</span>
-      </div>
-    </a>
-  </div>
+  <a class="feature" href="/journal/immersive-birthday-party-ideas/">
+    <img src="/images/gallery/g2-1600.webp"
+         srcset="/images/gallery/g2-1024.webp 1024w, /images/gallery/g2-1600.webp 1600w, /images/gallery/g2-2000.webp 2000w"
+         sizes="100vw" width="2000" height="1333"
+         alt="Lion-masked performers descending an ornate gilded staircase">
+    <div class="feature-text"><div class="feature-inner">
+      <p class="label">Celebrations</p>
+      <h2>Immersive birthday party ideas: build a <em>world</em>, not a theme</h2>
+      <p>How to turn a birthday into somewhere guests go, rather than something they dress up for.</p>
+      <span class="read">Read the piece</span>
+    </div></div>
+  </a>
+
+  <section class="soon" aria-labelledby="soon-title">
+    <h2 id="soon-title">More to come</h2>
+    <p>New pieces every month, drawn from the experiences Yes&amp; creates and the ideas behind them. For anything you want to talk through in the meantime, email <a href="mailto:hello@yesandworld.com">hello@yesandworld.com</a>.</p>
+  </section>
 </main>
+
+<div class="band"><p>Always asking what comes next.</p></div>
 
 <footer>
   <span>&copy; 2026 Yes&amp;</span>
@@ -137,5 +149,12 @@
   </div>
 </footer>
 
+<script>
+  (function(){
+    var nav=document.querySelector('nav.site');
+    function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 300); }
+    window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  })();
+</script>
 </body>
 </html>
